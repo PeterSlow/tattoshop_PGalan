@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="main.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="css/stylopag2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="container">
+        <nav class="nav-main">
+            <img src="iconos/skull_128x128_icon-icons.com_76502.ico" class="nav-brand" alt="">
+            <ul class="nav-menu show">
+                <li>
+                    <a href="./Portada.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="./Estudio.html">El Estudio</a>
+                </li>
+                <li>
+                    <a href="./galeria.html">Galeria de Trabajos</a>
+                </li>
+                <li>
+                    <a href="./Tienda.html">Tienda</a>
+                </li>
+                <li id="Comentarios"><a href="indexComents.html"><span>Opiniones</span></a></li>
+
+            </ul>
+            <ul class="nav-menu-right">
+                <!-- Enlace "Iniciar Sesión" en la barra de navegación -->
+                <li><a href="#" onclick="iniciarSesion()">Iniciar Sesión</a></li>
+                <li id="usuario-info" style="display: none;"></li>
+                <!-- Enlace "Registrarme" en la barra de navegación -->
+                <li><a href="#" onclick="toggleFormularioRegistro()">Registrarme</a></li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="registroForm" style="display: none;">
+            <h2>Registro</h2>
+            <form id="registroUsuarioForm" onsubmit="registrarUsuario(event)">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+        <hr>
+    </div>
+    <h1>Galeria de Trabajos</h1>
+    <span class="linea"></span>
+    <section class="galeria">
+        <a href="#image1">
+            <img src="img/trabajo1.jpeg" alt="">
+        </a>
+        <a href="#image2">
+            <img src="img/trabajo2.jpeg" alt="">
+        </a>
+        <a href="#image3">
+            <img src="img/trabajo3.jpeg" alt="">
+        </a>
+        <a href="#image4">
+            <img src="img/trabajo4.jpeg" alt="">
+        </a>
+        <a href="#image5">
+            <img src="img/trabajo5.jpeg" alt="">
+        </a>
+        <a href="#image6">
+            <img src="img/trabajo6.jpeg" alt="">
+        </a>
+    </section>
+
+    <article class="light-box" id="image1">
+
+        <a href="#image6" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="img/trabajo1.jpeg" alt="">
+        <a href="#image2" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image2">
+        <a href="#image1" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="img/trabajo2.jpeg">
+        <a href="#image3" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image3">
+        <a href="#image2" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="img/trabajo3.jpeg">
+        <a href="#image4" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image4">
+        <a href="#image3" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="img/trabajo4.jpeg">
+        <a href="#image5" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image5">
+        <a href="#image4" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="img/trabajo5.jpeg">
+        <a href="#image6" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image6">
+        <a href="#image5" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="img/trabajo6.jpeg">
+        <a href="#image1" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#" class="close">X</a>
+    </article>
+
+    <script src="https://kit.fontawesome.com/c15b744a04.js" crossorigin="anonymous"></script> 
+
+    <div class="cart-icon" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+
+    <div class="cart-popup" id="cartPopup">
+        <h3>Carrito</h3>
+        <div id="cartItems"></div>
+        <button id="finalizarCompraBtn" onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+
+    <div class="footer-links">
+        <div class="footer-container">
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>BlackFemia tattoo</h3>
+                    </a>
+                </li>
+                <LI>
+                    <a href="#">BlackFemia Tattoo es un estudio artístico de tatuajes y piercing en Albolote,
+                        (Granada).
+                        Miembros de la Unión Nacional de Tatutadores y Anilladores Profesionales (UNTAP) desde hace 14
+                        años.</a>
+                </LI>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>TITTLE ONE</h3>
+                    </a>
+                </li>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <!-- Agrega más enlaces según sea necesario -->
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>TITTLE ONE</h3>
+                    </a>
+                </li>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <!-- Agrega más enlaces según sea necesario -->
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>TITTLE ONE</h3>
+                    </a>
+                </li>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <!-- Agrega más enlaces según sea necesario -->
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h3>BlackFemia Tattoo Copyright</h3>
+    </footer>
+</body>
+
+</html>

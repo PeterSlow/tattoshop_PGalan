@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/stylopag3.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="container">
+        <nav class="nav-main">
+            <img src="iconos/skull_128x128_icon-icons.com_76502.ico" class="nav-brand" alt="">
+            <ul class="nav-menu show">
+                <li>
+                    <a href="./Portada.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="./Estudio.html">El Estudio</a>
+                </li>
+                <li>
+                    <a href="./galeria.html">Galeria de Trabajos</a>
+                </li>
+                <li>
+                    <a href="./Tienda.html">Tienda</a>
+                </li>
+                <li id="Comentarios"><a href="indexComents.html"><span>Opiniones</span></a></li>
+
+            </ul>
+            <ul class="nav-menu-right">
+                <!-- Enlace "Iniciar Sesión" en la barra de navegación -->
+                <li id="inicioSesionLink"><a href="#" onclick="iniciarSesion()">Iniciar Sesión</a></li>
+
+                <!-- Mostrar el nombre del usuario y el enlace para cerrar sesión -->
+                <li id="usuario-info" style="display: none;"></li>
+                <li id="cerrarSesion" style="display: none;"><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+
+                <!-- Enlace "Registrarse" en la barra de navegación -->
+                <li><a href="#" onclick="toggleFormularioRegistro()">Registrarse</a></li>
+
+                <li class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="registroForm" style="display: none;">
+            <h2>Registro</h2>
+            <form id="registroUsuarioForm" onsubmit="registrarUsuario(event)">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+
+        <div id="cartPopup" style="display: none;">
+            <!-- Contenido del carrito -->
+            <div id="cartItems"></div>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+
+        <hr>
+    </div>
+
+        <div class="principal">
+            <img class="transition" src="img/blackfemia.jpg" alt="castaña" width="100%" height="auto">
+        </div>
+        </head>
+        <br>
+
+        <header>
+            <div class="intro">
+                <h1>El Estudio</h1>
+                <h2>Fundacion y Origenes</h2>
+                <p>Blackfemia Tatto que lleva dedicándose en cuerpo y alma al mundo del tatuaje desde el año 2018.
+
+                    El primer local abrió al publico en 2005, y la actual localización lleva acomodando al equipo desde
+                    2011 con unas instalaciones mas amplias y modernas, disponiendo en total de 3 salas de tatuaje con
+                    TV, amplia zona de recepción y una coqueta boutique con marcas americanas de ropa y complementos.
+                </p>
+            </div>
+
+            <img class="separar" src="img/pngegg (1).png" alt="separar">
+
+            <img class="principal" src="img/estudio.jpg" alt="separcion" widht="100%" height="auto">
+        </header>
+
+        <div class="intro">
+            <h1>Nuestro Equipo</h1>
+            <h2>Componentes</h2>
+            <p>Somos un equipo polifacético a los que nos encanta lo que hacemos. En BlackFemia Tattoo no hay un trabajo
+                demasiado pequeño o grande, aceptamos solicitudes de tatuajes de todos los estilos y nos esforzamos cada
+                día por mejorar y por garantizar que cada cliente que nos visite se vaya contento y entusiasmado con el
+                trabajo que realizamos.</p>
+        </div>
+
+        <br>
+
+        <div class="containerbox">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/Melcom Cabansag.jpeg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <video class="flip-card" controls autoplay>
+                            <source src="video/mel.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/dohe.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <video class="flip-card" controls autoplay>
+                            <source src="video/dohe.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/merie.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <video class="flip-card" controls autoplay>
+                            <source src="video/meri.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro">
+            <h1>Salas de Trabajo, Boutique, Recepcion</h1>
+            <h2>Nuestro Espacio</h2>
+            <p>Dentro del estudio de tatuajes y piercings contamos con tres espacios separados para la realización de
+                trabajos artísticos así como una amplia zona de recepción y boutique con marcas originales además de
+                nuestra propia máquina recreativa con más de 2000 juegos!</p>
+            <div class="containerbox2">
+                <img src="img/estudio1.jpeg" style="width:260px;height:260px;cursor:zoom-in"
+                    onclick="document.getElementById('modal01').style.display='block'">
+
+                <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="img/estudio1.jpeg" style="width:100%">
+                    </div>
+                </div>
+                <img src="img/estudio2.jpeg" style="width:260px;height:260px;cursor:zoom-in"
+                    onclick="document.getElementById('modal02').style.display='block'">
+
+                <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="img/estudio2.jpeg" style="width:100%">
+                    </div>
+                </div>
+
+                <img src="img/estudio3.jpeg" style="width:260px;height:260px;cursor:zoom-in"
+                    onclick="document.getElementById('modal03').style.display='block'">
+
+                <div id="modal03" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="img/estudio3.jpeg" style="width:100%">
+                    </div>
+                </div>
+                <img src="img/estudio4.jpeg" style="width:260px;height:260px;cursor:zoom-in"
+                    onclick="document.getElementById('modal04').style.display='block'">
+
+                <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img src="img/estudio4.jpeg" style="width:100%">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-container">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h3>BlackFemia tattoo</h3>
+                        </a>
+                    </li>
+                    <LI>
+                        <a href="#">BlackFemia Tattoo es un estudio artístico de tatuajes y piercing en Granada,
+                            (Granada). Miembros de la Unión Nacional de Tatutadores y Anilladores Profesionales (UNTAP)
+                            desde hace 4 años.</a>
+                    </LI>
+
+                    </LI>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h3>TITTLE ONE</h3>
+                        </a>
+                    </li>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h3>TITTLE ONE</h3>
+                        </a>
+                    </li>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h3>TITTLE ONE</h3>
+                        </a>
+                    </li>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                    <LI>
+                        <a href="#">Blockchains</a>
+                    </LI>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <h3>BlackFemia Tattoo Copyright</h3>
+        </footer>
+</body>
+
+</html>
+<script src="main.js" defer></script>
+4

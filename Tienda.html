@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="main.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="css/stylopag4.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="container">
+        <nav class="nav-main">
+            <img src="iconos/skull_128x128_icon-icons.com_76502.ico" class="nav-brand" alt="">
+            <ul class="nav-menu show">
+                <li>
+                    <a href="./Portada.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="./Estudio.html">El Estudio</a>
+                </li>
+                <li>
+                    <a href="./galeria.html">Galeria de Trabajos</a>
+                </li>
+                <li>
+                    <a href="#">Tienda</a>
+                </li>
+                <li id="Comentarios"><a href="indexComents.html"><span>Opiniones</span></a></li>
+
+            </ul>
+            <ul class="nav-menu-right">
+                <!-- Enlace "Iniciar Sesión" en la barra de navegación -->
+                <li><a href="#" onclick="iniciarSesion()">Iniciar Sesión</a></li>
+                
+                <!-- Mostrar el nombre del usuario y el enlace para cerrar sesión -->
+                <li id="usuario-info" style="display: none;"></li>
+                <li id="cerrarSesion" style="display: none;"><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+                
+                <!-- Enlace "Registrarse" en la barra de navegación -->
+                <li><a href="#" onclick="toggleFormularioRegistro()">Registrarse</a></li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Agrega este formulario al final del body -->
+        <div id="registroForm" style="display: none;">
+            <h2>Registro</h2>
+            <form id="registroUsuarioForm" onsubmit="registrarUsuario(event)">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+
+        <hr>
+    </div>
+
+    <!--imagenprincipal-->
+    <header>
+        <div class="showcase">
+            <h1>Tienda Online</h1>
+            <img class="inicio" src="img/tienda-de-tatuajes.jpg" alt="HTML5 Icon">
+        </div>
+    </header>
+
+    <br>
+
+    <h2>Maquinas</h2>
+
+    <div class="tattoo-cards">
+        <div>
+            <img src="img/INKJECTA.jpg" class="nav-brand" alt="">
+            <h3>Inkyecta</h3>
+            <p>499,00 $</p>
+            <!-- Ejemplo para el producto Inkyecta -->
+            <a href="#" class="btn buy-btn" data-product="Inkyecta" data-price="499.00" data-image="img/INKJECTA.jpg"
+                onclick="addToCart('Inkyecta', '499.00', 'img/INKJECTA.jpg')">Comprar<i
+                    class="fas fa-angle-double-r"></i></a>
+        </div>
+
+        <div>
+            <img src="img/cheyenne.jpg" class="nav-brand" alt="">
+            <h3>Cheyenne</h3>
+            <p>845.00 $</p>
+            <a href="#" class="btn buy-btn" data-product="Cheyenne" data-price="845.00" data-image="img/cheyenne.jpg"
+                onclick="addToCart('Cheyenne', '845.00', 'img/Cheyenne.jpg')">Comprar<i
+                    class="fas fa-angle-double-r"></i></a>
+        </div>
+
+        <div>
+            <img src="img/dragonfly.jpg" class="nav-brand" alt="">
+            <h3>Dragonfly</h3>
+            <p>600.00 $</p>
+            <a href="#" class="btn buy-btn" data-product="Dragonfly" data-price="600.00" data-image="img/dragonfly.jpg"
+                onclick="addToCart('Dragonfly', '600.00', 'img/Dragonfly.jpg')">Comprar<i
+                    class="fas fa-angle-double-r"></i></a>
+        </div>
+
+        <div>
+            <img src="img/bishop.jpeg" class="nav-brand" alt="">
+            <h3>Bishop</h3>
+            <p>193,60 €</p>
+            <a href="#" class="btn buy-btn" data-product="Bishop" data-price="193.00" data-image="img/bishop.jpeg"
+                onclick="addToCart('Bishop', '193.00', 'img/bishop.jpeg')">Comprar<i
+                    class="fas fa-angle-double-r"></i></a>
+        </div>
+    </div>
+
+    <h2>Fuentes de Alimentacion</h2>
+
+    <div class="tattoo-cards">
+        <div>
+            <img src="img/hurricane-hp2-tattoo.jpg" class="nav-brand" alt="">
+            <h3>Hurricane</h3>
+            <p>90,00 $</p>
+            <a href="#" class="btn buy-btn" data-product="Hurricane" data-price="90.00"
+                data-image="img/hurricane-hp2-tattoo.jpg"
+                onclick="addToCart('Hurricane', '193.00', 'img/hurricane-hp2-tattoo.jpg')">Comprar<i
+                    class="fas fa-angle-double-r"></i></a>
+        </div>
+
+        <div>
+            <img src="img/critical.jpeg" class="nav-brand" alt="">
+            <h3>Critical</h3>
+            <p>289.00 $</p>
+            <a href="#" class="btn buy-btn" data-product="Critical" data-price="289.00" data-image="img/critical.jpeg"
+                onclick="addToCart('Critical', '289.00', 'img/critical.jpeg')">Comprar<i
+                    class="fas fa-angle-double-r"></i></a>
+        </div>
+
+        <div>
+            <img src="img/fuente.jpg" class="nav-brand" alt="">
+            <h3>Musotoku</h3>
+            <p>500,00 $</p>
+            <a href="" class="btn buy-btn" data-product="Musotoku" data-price="500.00" data-image="img/fuente.jpg"
+                onclick="addToCart('Musotoku', '500.00', 'img/fuente.jpg')">Comprar<i
+                    class="fas fa-angle-double-r"></i></a>
+        </div>
+
+        <div>
+            <img src="img/fuentes-de-alimentacion-fuente-de-alimentacion-venom-ps2.jpg" class="nav-brand" alt="">
+            <h3>Venom</h3>
+
+            <p>363,60 €</p>
+            <a href="#" class="btn buy-btn" data-product="Venom" data-price="363.60">Comprar<i
+                    class="fas fa-angle-double-r"></i></a>
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <div class="footer-container">
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>BlackFemia tattoo</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">BlackFemia Tattoo es un estudio artístico de tatuajes y piercing en Granada, (Granada).
+                        Miembros de la Unión Nacional de Tatutadores y Anilladores Profesionales (UNTAP) desde hace 4
+                        años.</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Agrega el icono del carrito y el área del carrito -->
+    <div class="cart-icon" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+
+    <div class="cart-popup" id="cartPopup">
+        <h3>Carrito</h3>
+        <div id="cartItems"></div>
+        <button id="finalizarCompraBtn" onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+
+
+
+    <footer class="footer">
+        <h3>BlackFemia Tattoo Copyright</h3>
+    </footer>
+    <!-- Agrega esto al final del body -->
+    <script>
+        function addToCart(product, price, image) {
+            $.ajax({
+                type: 'POST',
+                url: 'carrito.php',
+                data: {
+                    product: product,
+                    price: price,
+                    image: image
+                },
+                success: function (response) {
+                    console.log(response);  // Puedes mostrar mensajes de éxito en la consola o en el frontend si lo deseas
+                },
+                error: function (error) {
+                    console.error('Error al agregar al carrito:', error);
+                }
+            });
+        }
+
+        actualizarBarraNavegacion();
+
+    </script>
+
+</body>
+
+</html>

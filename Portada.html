@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/stylopag.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="container">
+        <nav class="nav-main">
+            <img src="iconos/skull_128x128_icon-icons.com_76502.ico" class="nav-brand" alt="">
+            <ul class="nav-menu show">
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="./Estudio.html">El Estudio</a>
+                </li>
+                <li>
+                    <a href="./galeria.html">Galeria de Trabajos</a>
+                </li>
+                <li>
+                    <a href="./Tienda.html">Tienda</a>
+                </li>
+                <li id="Comentarios"><a href="indexComents.html"><span>Opiniones</span></a></li>
+
+            </ul>
+            <ul class="nav-menu-right">
+                <li><a href="#" onclick="iniciarSesion()">Iniciar Sesión</a></li>
+                <li id="usuario-info" style="display: none;"></li>
+                <ul class="nav-menu-right">
+                    <!-- Enlace "Registrarme" en la barra de navegación -->
+                    <ul class="nav-menu-right">
+                        <li>
+                            <a href="#" onclick="mostrarFormularioRegistro()">Registrarme</a>
+                        </li>
+                    </ul>
+
+                    <li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+
+                </ul>
+        </nav>
+        <div id="registroForm" style="display: none;">
+            <h2>Registro</h2>
+            <form id="registroUsuarioForm" onsubmit="registrarUsuario(event)">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+
+        <hr>
+    </div>
+        <hr>
+        <!--imagenprincipal-->
+
+
+        <header>
+            <video class="inicio" controls autoplay>
+                <source src="video/videoBlack.mp4" type="video/mp4">
+            </video>
+            <div class="showcase">
+                <h1>Blackfemia Tattoo</h1>
+                <p>DONDE LA TINTA CORRE TODOS LOS DÍAS…
+                    Si te gustaría concertar una cita con nosotros, ve directamente a nuestra página de contacto y dinos
+                    por teléfono, email o Whatsapp que te gustaría hacerte.
+
+                    Si lo que buscas es inspiración, no dudes en visitar nuestras galerías en las secciones tattoo y
+                    piercing.
+
+                    No te olvides tampoco de ver nuestros consejos sobre los cuidados higiénicos para tattoos y
+                    piercings.</p>
+                <a heref="#" class="btn">Read More<i class="fas fa-angle-double-r"></i></a>
+            </div>
+        </header>
+
+        <!--SEGUNDA SECCION-->
+        <div class="tattoo-cards">
+            <div>
+                <img src="img/freehand.jpeg" class="nav-brand" alt="">
+                <h3>FREEHANDS</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, dolor.</p>
+                <a href="#">Learn More<i class="fas fa-angle-double-right"></i></a>
+            </div>
+
+            <div>
+                <img src="img/diseños.jpeg" class="nav-brand" alt="">
+                <h3>DISEÑOS</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, dolor.</p>
+                <a href="#">Learn More<i class="fas fa-angle-double-right"></i></a>
+            </div>
+
+            <div>
+                <img src="img/trabajos.jpeg" class="nav-brand" alt="">
+                <h3>TRABAJOS</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, dolor.</p>
+                <a href="#">Learn More<i class="fas fa-angle-double-right"></i></a>
+            </div>
+
+            <div>
+                <img src="img/graffitis.jpeg" class="nav-brand" alt="">
+                <h3>GRAFFITIS</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, dolor.</p>
+                <a href="#">Learn More<i class="fas fa-angle-double-right"></i></a>
+            </div>
+
+        </div>
+
+        <section class="cards-banner-one">
+            <div class="content">
+                <h2>Lorem, ipsum dolor.</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias error cumque et numquam corporis
+                    vitae laborum reprehenderit earum, accusamus dolor!</p>
+                <a href="#" class="btn">Learn More<i class="fas fa-angle-double-right"></i></a>
+            </div>
+        </section>
+
+        <div class="tattoo-cards">
+            <div>
+                <img src="img/INKJECTA.jpg" class="nav-brand" alt="">
+                <h3>MAQUINAS</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, dolor.</p>
+                <a href="#">Learn More<i class="fas fa-angle-double-right"></i></a>
+            </div>
+
+            <div>
+                <img src="img/fuente.jpg" class="nav-brand" alt="">
+                <h3>FUENTES</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, dolor.</p>
+                <a href="#">Learn More<i class="fas fa-angle-double-right"></i></a>
+            </div>
+
+            <div>
+                <img src="img/HIGIENICO.jpg" class="nav-brand" alt="">
+                <h3>HIGIENE</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, dolor.</p>
+                <a href="#">Learn More<i class="fas fa-angle-double-right"></i></a>
+            </div>
+
+            <div>
+                <img src="img/abstract-background-with-green-cloud.jpg" class="nav-brand" alt="">
+                <h3>TINTAS</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, dolor.</p>
+                <a href="#">Learn More<i class="fas fa-angle-double-right"></i></a>
+            </div>
+        </div>
+
+        <section class="cards-banner-two">
+            <div class="content">
+                <h2>Lorem ipsum, dolor</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias beatae quas expedita odit minima
+                    quaerat eius cupiditate iusto porro delectus! Quisquam ipsam est veniam tempora esse corrupti,
+                    accusantium enim sit.</p>
+                <a href=# class="btn">Learn More<i class="fas fa-angle-double-right"></i></a>
+            </div>
+        </section>
+
+        <section class="social">
+            <p>Follow BlackFemia Tattoo</p>
+            <div class="links">
+                <a href="https://www.facebook.com/people/Blackfemia-Tattoo-Studio/100021257215933/">
+                    <i class="fab fa-facebook-f">
+                    </i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter">
+                    </i>
+                </a>
+                <a href="https://www.instagram.com/blackfemia.tattoostudio/?hl=es">
+                    <i class="fab fa-instagram">
+                    </i>
+                </a>
+        </section>
+    </div>
+
+    <div class="footer-links">
+        <div class="footer-container">
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>Slash tattoo</h3>
+                    </a>
+                </li>
+                <LI>
+                    <a href="#">Slash Tattoo es un estudio artístico de tatuajes y piercing en Albolote, (Granada).
+                        Miembros de la Unión Nacional de Tatutadores y Anilladores Profesionales (UNTAP) desde hace 14
+                        años.</a>
+                </LI>
+
+                </LI>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>TITTLE ONE</h3>
+                    </a>
+                </li>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>TITTLE ONE</h3>
+                    </a>
+                </li>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>TITTLE ONE</h3>
+                    </a>
+                </li>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+                <LI>
+                    <a href="#">Blockchains</a>
+                </LI>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h3>BlackFemia Tattoo Copyright</h3>
+    </footer>
+</body>
+
+</html>

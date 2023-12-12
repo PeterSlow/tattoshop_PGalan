@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/stylopag.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <nav class="nav-main">
+        <img src="iconos/skull_128x128_icon-icons.com_76502.ico" class="nav-brand" alt="">
+        <ul class="nav-menu show">
+            <li>
+                <a href="./Portada.html">Inicio</a>
+            </li>
+            <li>
+                <a href="./Estudio.html">El Estudio</a>
+            </li>
+            <li>
+                <a href="./galeria.html">Galeria de Trabajos</a>
+            </li>
+            <li>
+                <a href="#">Tienda</a>
+            </li>
+            <li id="Comentarios"><a href="indexComents.html"><span>Opiniones</span></a></li>
+
+        </ul>
+        <ul class="nav-menu-right">
+            <!-- Enlace "Iniciar Sesión" en la barra de navegación -->
+            <li><a href="#" onclick="iniciarSesion()">Iniciar Sesión</a></li>
+            
+            <!-- Mostrar el nombre del usuario y el enlace para cerrar sesión -->
+            <li id="usuario-info" style="display: none;"></li>
+            <li id="cerrarSesion" style="display: none;"><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+            
+            <!-- Enlace "Registrarse" en la barra de navegación -->
+            <li><a href="#" onclick="toggleFormularioRegistro()">Registrarse</a></li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    </nav>
+    <h3>Comentarios</h3>
+    <ul id="listOfItemsID" class="items">
+    </ul>
+    <form id="formToAddItemsID" class="addItems">
+      <input type="text" name="item" placeholder="Escriba aquí su comentario..." required>
+      <input type="submit" value="Comentar">
+    </form>
+  </div>
+
+  <script src="scriptComents.js"></script>
+
+</body>
+
+</html>

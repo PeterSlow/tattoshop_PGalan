@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Agrega estos enlaces según sea necesario -->
+    <a href="admin_productos.php">Administrar Productos</a>
+    <a href="admin_logout.php">Cerrar Sesión</a>
+
+</head>
+<body>
+    <!-- Agrega este formulario en tu HTML -->
+<div class="admin-login-form">
+    <h2>Inicio de Sesión de Administrador</h2>
+    <form action="admin_login.php" method="post">
+        <label for="correo">Correo:</label>
+        <input type="text" id="correo" name="correo" required>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+</div>
+
+</body>
+<?php
+session_start();
+?>
+
+
+
+</html>
